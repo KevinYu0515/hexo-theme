@@ -4,7 +4,7 @@ bulma-stylus-root = '../../../../node_modules/bulma-stylus/stylus'
  *   Override Bulma CSS Framework
  * --------------------------------- */
 $body-size ?= 14px
-$body-background-color ?= #f7f7f7
+$body-background-color ?=rgb(16, 25, 38)
 
 $family-sans-serif ?= Ubuntu, Roboto, 'Open Sans', 'Microsoft YaHei', sans-serif
 $family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
@@ -12,7 +12,9 @@ $family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
 $size-7 ?= .85rem
 $size-small ?= .75rem
 
-$primary ?= $blue
+$primary ?= rgb(5, 150, 105)
+$text-light ?= rgb(145, 147, 159)
+$pagination-current-background-color ?= rgb(5, 150, 105)
 $custom-colors ?= {
     grey-lightest: {
         '1': $grey-lightest
@@ -41,7 +43,7 @@ $card-media-margin ?= 0.75rem
 $card-shadow ?= $shadow, 0 0 1px rgba(0, 0, 0, 0.1)
 
 $menu-item-active-color ?= $link
-$menu-item-active-background-color ?= hsl(219, 70%, 96%)
+$menu-item-active-background-color ?= rgb(133, 189, 166)
 
 $content-heading-weight ?= $weight-normal
 
@@ -65,6 +67,9 @@ $colors = merge($colors, $custom-colors)
 @import bulma-stylus-root + '/grid/_all'
 @import bulma-stylus-root + '/layout/_all'
 
+*
+    line-height: 28px
+    
 html
     height: 100%
     -webkit-text-size-adjust: 100%
@@ -79,6 +84,9 @@ body
 
 body > .section
     flex-grow: 1
+
+strong
+    color: rgb(5, 150, 105)
 
 +desktop()
     ::-webkit-scrollbar

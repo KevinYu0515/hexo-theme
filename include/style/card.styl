@@ -2,11 +2,26 @@
  *              Card
  * --------------------------------- */
 .card
+    color: rgb(145, 147, 159)
     overflow: visible
     border-radius: $card-radius
 
     & + .card, & + .column-right-shadow
         margin-top: 1.5rem
+
+    .title
+        color: rgb(221, 223, 215)
+
+    .card-content
+        background-color: rgb(10, 15, 31)
+
+        .content>*
+            color: rgb(221, 223, 215)
+            code
+                border-radius: 4px;
+                padding: 3px 6px;
+                background-color: rgb(29, 40, 53)
+                transition: color .25s, background-color .5s;
 
     .card-image
         overflow: hidden

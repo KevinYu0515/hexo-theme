@@ -7,7 +7,8 @@ $navbar-item-margin-v ?= 0
 $navbar-item-margin-h ?= 0
 
 .navbar-main
-    box-shadow: $shadow
+    background-color: rgb(16, 25, 38)
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
     .navbar-container
         overflow-x: auto
@@ -32,12 +33,19 @@ $navbar-item-margin-h ?= 0
         margin-left: auto
 
     .navbar-item
+        color: rgb(245, 243, 245)
         display: flex
         align-items: center
         padding: $navbar-item-padding-v $navbar-item-padding-h
         margin: $navbar-item-margin-v $navbar-item-margin-h
 
+        &:hover{
+            background-color: transparent
+            color: rgba(245, 243, 245, 0.5)
+        }
+
         &.is-active
+            color: rgb(219, 84, 97)
             background-color: transparent
 
     +until($navbar-breakpoint)

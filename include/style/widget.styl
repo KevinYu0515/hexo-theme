@@ -1,11 +1,17 @@
 .widget
     .menu-list
+        a
+            color: rgb(221, 223, 215)
+            &:hover
+                background: rgb(29, 40, 53)
+            &.is-active
+                background: rgb(29, 40, 53)
         li
             ul
                 margin-right: 0
 
         .level
-            margin-bottom: 0
+            margin-bottom: 5px
 
             .level-left, .level-right, .level-item
                 flex-shrink: 1
@@ -14,8 +20,8 @@
                 align-items: flex-start
 
         .tag
-            background: $light-grey
-            color: $white-invert
+            background: transparent
+            color: rgb(221, 223, 215)
 
     .tags
         .tag:first-child

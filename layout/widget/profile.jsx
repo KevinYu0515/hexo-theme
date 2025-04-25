@@ -145,6 +145,11 @@ Profile.Cacheable = cacheComponent(Profile, 'widget.profile', props => {
                 count: tagCount,
                 title: _p('common.tag', tagCount),
                 url: url_for('/tags/')
+            },
+            notes: {
+                count: 0,
+                title: _p('common.note', 0),
+                url: url_for('/notes/')
             }
         },
         followLink: follow_link ? url_for(follow_link) : undefined,
