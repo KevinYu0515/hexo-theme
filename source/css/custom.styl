@@ -1,6 +1,8 @@
 $primary ?= rgb(5, 150, 105)
 $text-light ?= rgb(145, 147, 159)
 $pagination-current-background-color ?= rgb(5, 150, 105)
+$body-background-color ?=rgb(16, 25, 38)
+$menu-item-active-background-color ?= rgb(133, 189, 166)
 
 *
     line-height: 28px
@@ -27,6 +29,11 @@ strong
                 transition: color .25s, background-color .5s;
     .title
         color: rgb(221, 223, 215)
+
+.article-more
+    background-color: $primary;
+    border-color: transparent;
+    color: rgba(255, 255, 255, 0.7);
 
 footer.footer
     background: rgb(27, 38, 79)
