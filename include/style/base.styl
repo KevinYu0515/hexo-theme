@@ -12,9 +12,6 @@ $family-code ?= 'Source Code Pro', monospace, 'Microsoft YaHei'
 $size-7 ?= .85rem
 $size-small ?= .75rem
 
-$primary ?= rgb(5, 150, 105)
-$text-light ?= rgb(145, 147, 159)
-$pagination-current-background-color ?= rgb(5, 150, 105)
 $custom-colors ?= {
     grey-lightest: {
         '1': $grey-lightest
@@ -67,8 +64,6 @@ $colors = merge($colors, $custom-colors)
 @import bulma-stylus-root + '/grid/_all'
 @import bulma-stylus-root + '/layout/_all'
 
-*
-    line-height: 28px
     
 html
     height: 100%
@@ -84,9 +79,6 @@ body
 
 body > .section
     flex-grow: 1
-
-strong
-    color: rgb(5, 150, 105)
 
 +desktop()
     ::-webkit-scrollbar

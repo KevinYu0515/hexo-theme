@@ -1,0 +1,51 @@
+$primary ?= rgb(5, 150, 105)
+$text-light ?= rgb(145, 147, 159)
+$pagination-current-background-color ?= rgb(5, 150, 105)
+
+*
+    line-height: 28px
+
+strong
+    color: rgb(5, 150, 105) 
+
+.navbar-main
+    background-color: rgb(16, 25, 38)
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+.card
+    color: rgb(145, 147, 159) 
+
+    .card-content
+        background-color: rgb(10, 15, 31)
+
+        .content>*
+            color: rgb(221, 223, 215) 
+            code
+                border-radius: 4px;
+                padding: 3px 6px;
+                background-color: rgb(29, 40, 53)
+                transition: color .25s, background-color .5s;
+    .title
+        color: rgb(221, 223, 215)
+
+footer.footer
+    background: rgb(27, 38, 79)
+
+
+.widget
+    .menu-list
+        a
+            color: rgb(221, 223, 215)
+            &:hover
+                background: rgb(29, 40, 53)
+            &.is-active
+                background: rgb(29, 40, 53)
+
+        .tag
+            background: transparent
+            color: rgb(221, 223, 215)
+
+    .tags
+        .tag:first-child
+            background: $primary
+            color: $primary-invert
