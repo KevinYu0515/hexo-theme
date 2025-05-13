@@ -3,12 +3,14 @@ $text-light ?= rgb(145, 147, 159)
 $pagination-current-background-color ?= rgb(5, 150, 105)
 $body-background-color ?=rgb(16, 25, 38)
 $menu-item-active-background-color ?= rgb(133, 189, 166)
+$desktop ?= 1087px
 
 *
     line-height: 28px
 
 body
     background: $body-background-color
+    color: rgb(245, 243, 245)
 
 strong
     color: rgb(5, 150, 105) 
@@ -28,6 +30,10 @@ strong
         &.is-active
             color: rgb(219, 84, 97)
             background-color: transparent
+
+@media screen and (max-width: $desktop)
+    .navbar-menu
+        background-color: rgb(16, 25, 38)
 
 .card
     color: rgb(145, 147, 159) 
@@ -53,6 +59,10 @@ strong
 footer.footer
     background: rgb(27, 38, 79)
 
+.pagination .pagination-previous, .pagination .pagination-next
+    background: rgb(5, 150, 105) 
+    a
+        color: rgba(255, 255, 255, 0.7)
 
 .widget
     .menu-list
@@ -70,4 +80,4 @@ footer.footer
     .tags
         .tag:first-child
             background: $primary
-            color: $primary-invert
+            color: rgb(221, 223, 215)
