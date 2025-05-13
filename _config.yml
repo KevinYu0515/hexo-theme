@@ -115,22 +115,22 @@ navbar:
     links:
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/KevinYu0515
 # Page footer configurations
 footer:
     # Copyright text
     copyright: © 2019
     # Links to be shown on the right of the footer section
     links:
-        Creative Commons:
-            icon: fab fa-creative-commons
-            url: https://creativecommons.org/
-        Attribution 4.0 International:
-            icon: fab fa-creative-commons-by
-            url: https://creativecommons.org/licenses/by/4.0/
+        Facebook:
+            icon: fab fa-facebook
+            url: https://www.facebook.com/profile.php?id=100009946749327&locale=zh_TW
+        Instagram:
+            icon: fab fa-instagram
+            url: https://www.instagram.com/yukai8765/
         Download on GitHub:
             icon: fab fa-github
-            url: https://github.com/ppoffice/hexo-theme-icarus
+            url: https://github.com/KevinYu0515
 # Search plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
 search:

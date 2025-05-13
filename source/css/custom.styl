@@ -6,7 +6,13 @@ $menu-item-active-background-color ?= rgb(133, 189, 166)
 $desktop ?= 1087px
 
 *
-    line-height: 28px
+    line-height: 28px;
+    scrollbar-width: thin;
+    scrollbar-color: #92dde2 #ffffff;
+
+@media screen and (max-width: $desktop)
+    body
+        font-size: 10px;
 
 body
     background: $body-background-color
@@ -51,6 +57,20 @@ strong
     .title
         color: rgb(221, 223, 215)
 
+@media screen and (max-width: 768px)
+    article.article .content
+        word-wrap: break-word;
+        font-size: 1rem;
+
+@media screen and (max-width: 768px)
+    .is-size-4-mobile
+        font-size: 1.3rem !important;
+    .title:not(:last-child)
+        margin-bottom: .8rem;
+@media screen and (max-width: 768px)
+    .is-size-7, article.media .date, article.media .categories, .article-licensing .licensing-title a, .article-licensing .licensing-meta h6
+        font-size: 0.65rem !important;
+
 .article-more
     background-color: $primary;
     border-color: transparent;
@@ -81,3 +101,24 @@ footer.footer
         .tag:first-child
             background: $primary
             color: rgb(221, 223, 215)
+
+/* ===== Scrollbar CSS ===== */
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar
+    width: 4px;
+
+*::-webkit-scrollbar-track
+    background: #ffffff;
+
+*::-webkit-scrollbar-thumb
+    background-color: #92dde2;
+    border-radius: 10px;
+    border: 1px solid #ffffff;
+
+.content table thead td, .content table thead th
+    color: rgb(221, 223, 215)
+
+@media screen and (max-width: 768px)
+    .content table thead td, .content table thead th
+        font-size: 0.85rem
