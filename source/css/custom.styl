@@ -8,7 +8,7 @@ $desktop ?= 1087px
 *
     line-height: 28px;
     scrollbar-width: thin;
-    scrollbar-color: #92dde2 #ffffff;
+    scrollbar-color: #92dde2 rgb(29, 40, 53);
 
 @media screen and (max-width: $desktop)
     body
@@ -109,7 +109,7 @@ footer.footer
     width: 4px;
 
 *::-webkit-scrollbar-track
-    background: #ffffff;
+    background:rgb(29, 40, 53)
 
 *::-webkit-scrollbar-thumb
     background-color: #92dde2;
@@ -122,3 +122,30 @@ footer.footer
 @media screen and (max-width: 768px)
     .content table thead td, .content table thead th
         font-size: 0.85rem
+
+.link-muted 
+    color: rgb(221, 223, 215)
+
+.breadcrumb li.is-active a
+    color: rgb(221, 223, 215)
+
+.searchbox .searchbox-container
+    background-color: rgb(27, 38, 79)
+
+.searchbox .searchbox-result-item:not(.disabled):not(.active):not(:active):hover
+    background-color: rgb(29, 40, 53)
+
+.searchbox .searchbox-result-section
+    border-bottom: none;
+
+.searchbox .searchbox-input
+    color: rgb(27, 38, 79)
+
+.searchbox .searchbox-result-item em
+    background-color: rgb(5, 150, 105) 
+
+.searchbox a
+    color: rgb(27, 38, 79)
+
+.searchbox .searchbox-close:hover
+    color: rgb(29, 40, 53)

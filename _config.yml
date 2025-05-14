@@ -139,10 +139,10 @@ search:
     index_pages: true
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-# comment:
-#     type: disqus
-#     # Disqus shortname
-#     shortname: ''
+comment:
+    type: disqus
+    # Disqus shortname
+    shortname: yukai
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
@@ -180,10 +180,10 @@ search:
 #         qrcode: ''
 # Share plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
-share:
-    type: sharethis
-    # URL to the ShareThis share plugin script
-    install_url: ''
+# share:
+#     type: sharethis
+#     # URL to the ShareThis share plugin script
+#     install_url: 'https://platform-api.sharethis.com/js/sharethis.js#property=682406b005753900197e4772&product=inline-reaction-buttons&source=platform'
 # Sidebar configurations.
 # Please be noted that a sidebar is only visible when it has at least one widget
 sidebar:
