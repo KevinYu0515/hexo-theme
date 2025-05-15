@@ -26,6 +26,20 @@
         }
     }
 
+    function bindBurgerToggle() {
+      const $burger = $(".navbar-burger");
+      const $menu = $(".navbar-menu");
+
+      if ($burger.length && $menu.length) {
+        $burger.off("click").on("click", function () {
+          $burger.toggleClass("is-active");
+          $menu.toggleClass("active");
+
+          $menu.css("max-height", $menu.hasClass("active") ? "500px" : "0");
+        });
+      }
+    }
+
     // // Listen for start of Pjax
     // document.addEventListener('pjax:send', function() {
     //     return;
@@ -53,5 +67,8 @@
         // TODO pace stop loading animation
     });
 
-    document.addEventListener('DOMContentLoaded', () => initPjax());
+    document.addEventListener('DOMContentLoaded', () => {
+        initPjax();
+        bindBurgerToggle();
+    });
 }());

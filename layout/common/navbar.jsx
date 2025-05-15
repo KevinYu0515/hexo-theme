@@ -28,6 +28,22 @@ class Navbar extends Component {
             showSearch,
             searchTitle
         } = this.props;
+        
+        const renderMenu = () => (
+            Object.keys(menu).map(name => {
+                const item = menu[name];
+                return (
+                <a
+                    class={classname({ 'navbar-item': true, 'is-active': item.active })}
+                    href={item.url}
+                >
+                    {name}
+                </a>
+                );
+            })
+        );
+        const desktopMenu = renderMenu(); 
+        const mobileMenu = renderMenu();
 
         let navbarLogo = '';
         if (logo) {
@@ -48,12 +64,7 @@ class Navbar extends Component {
                     </a>
                 </div>
                 <div class='navbar-menu'>
-                    {Object.keys(menu).length ? <div class="navbar-start">
-                        {Object.keys(menu).map(name => {
-                            const item = menu[name];
-                            return <a class={classname({ 'navbar-item': true, 'is-active': item.active })} href={item.url}>{name}</a>;
-                        })}
-                    </div> : null}
+                    {Object.keys(menu).length > 0 && <div class="navbar-start">{desktopMenu}</div>}
                     <div class="navbar-end">
                         {Object.keys(links).length ? <Fragment>
                             {Object.keys(links).map(name => {
@@ -88,25 +99,12 @@ class Navbar extends Component {
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </a>
-                <div className="navbar-menu">
-                    {Object.keys(menu).length > 0 && (
-                        Object.keys(menu).map(name => {
-                            const item = menu[name];
-                            return (
-                                <a
-                                    class={classname({ 'navbar-item': true, 'is-active': item.active })}
-                                    href={item.url}
-                                >
-                                    {name}
-                                </a>
-                            );
-                        })
-                    )}
-                </div>
+                {Object.keys(menu).length > 0 && <div class="navbar-menu">{mobileMenu}</div>}
             </div>
         </nav>;
     }
 }
+
 
 module.exports = cacheComponent(Navbar, 'common.navbar', props => {
     const { config, helper, page } = props;

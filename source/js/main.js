@@ -137,13 +137,6 @@
         $('.navbar-main .catalogue').on('click', toggleToc);
     }
 
-    const $burger = $('.navbar-burger');
-    const $menu = $('.navbar-menu');
 
-    if ($burger.length && $menu.length) {
-        $burger.on('click', function () {
-            $menu.css('max-height', $menu.css('max-height') === '500px' ? '0' : '500px');
-        });
-    }
 
 }(jQuery, window.moment, window.ClipboardJS, window.IcarusThemeSettings));
