@@ -14,6 +14,7 @@ function isSameLink(a, b) {
 }
 
 class Navbar extends Component {
+
     render() {
         const {
             logo,
@@ -46,7 +47,7 @@ class Navbar extends Component {
                         {navbarLogo}
                     </a>
                 </div>
-                <div class="navbar-menu">
+                <div class='navbar-menu'>
                     {Object.keys(menu).length ? <div class="navbar-start">
                         {Object.keys(menu).map(name => {
                             const item = menu[name];
@@ -69,6 +70,38 @@ class Navbar extends Component {
                             <i class="fas fa-search"></i>
                         </a> : null}
                     </div>
+                </div>
+            </div>
+            <div class="navbar-mobile">
+                <a class="navbar-item navbar-logo" href={siteUrl}>
+                    {navbarLogo}
+                </a>
+                <a
+                    role="button"
+                    class={classname({
+                        'navbar-burger': true,
+                        'burger': true,
+                    })}
+                    aria-label="menu"
+                >
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+                <div className="navbar-menu">
+                    {Object.keys(menu).length > 0 && (
+                        Object.keys(menu).map(name => {
+                            const item = menu[name];
+                            return (
+                                <a
+                                    class={classname({ 'navbar-item': true, 'is-active': item.active })}
+                                    href={item.url}
+                                >
+                                    {name}
+                                </a>
+                            );
+                        })
+                    )}
                 </div>
             </div>
         </nav>;

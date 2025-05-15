@@ -149,3 +149,26 @@ footer.footer
 
 .searchbox .searchbox-close:hover
     color: rgb(29, 40, 53)
+
+.navbar-mobile
+    display: none;
+
+@media screen and (max-width: 768px)
+    .navbar-main .navbar-container
+        display: none;
+    .navbar-mobile
+        position: relative;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+        .navbar-burger
+            span
+                background-color: rgb(221, 223, 215)
+        .navbar-menu
+            position: absolute;
+            top: 50px;
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            transition: max-height 0.3s ease, opacity 0.3s ease;
